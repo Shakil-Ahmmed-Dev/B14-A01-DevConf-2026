@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  --cta-bg: #1D4ED8;
+  --cta-bg: #1d4ed8;
 }
 
 * {
@@ -37,4 +37,55 @@ button.cta {
 
 button.cta.header-cta {
   padding: 12px 24px;
+}
+
+section {
+  padding: 80px 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div#hero-wrapper {
+  aspect-ratio: 1080 / 720;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0) 70%),
+    linear-gradient(45deg, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, 0.88) 87%),
+    url("../assets/banner.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding: 54px 0;
+
+  section {
+    height: 100%;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 0;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+
+      h1 {
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: -3.2px;
+      }
+
+      p {
+        width: 829px;
+        font-size: 22px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+button.cta.hero-cta {
+  padding: 22.5px 45px;
+  font-size: 24px;
+  line-height: 24px;
 }
