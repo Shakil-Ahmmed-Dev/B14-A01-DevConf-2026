@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --cta-bg: #1D4ED8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 24px;
+}
+
+button {
+  border: none;
+}
+
+button.cta {
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: var(--cta-bg);
+  color: white;
+}
+
+button.cta.header-cta {
+  padding: 12px 24px;
+}
