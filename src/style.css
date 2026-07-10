@@ -254,3 +254,13 @@ section#pricing {
     }
   }
 }
+
+footer {
+  color: var(--color-gray-400);
+  background-color: var(--color-blue-900);
+  font-size: 16px;
+  line-height: 19.5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 110px;
+}
