@@ -4,6 +4,14 @@
   --cta-bg: #1d4ed8;
   --card-stroke-color: #e5e7eb;
   --accent-color: #2563eb;
+  --text-color-muted: #575757;
+  --color-blue-100: #93c5fd;
+  --color-blue-300: #60a5fa;
+  --color-blue-900: #0d1b2a;
+  --color-gray-200: rgba(255, 255, 255, 0.8);
+  --color-gray-400: #888888;
+  --color-gray-500: rgba(255, 255, 255, 0.5);
+  --color-gray-900: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -131,6 +139,117 @@ section#speakers {
           font-size: 14px;
           line-height: 21px;
         }
+      }
+    }
+  }
+}
+
+section#pricing {
+  h2 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color-muted);
+    padding-top: 12px;
+  }
+
+  div.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    padding-inline: 48px;
+    padding-top: 48px;
+
+    div.item {
+      padding: 32px;
+      border: 1px solid var(--card-stroke-color);
+      border-radius: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      p.type {
+        color: var(--color-gray-400);
+        font-weight: 600;
+      }
+
+      h3.price {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: bold;
+        padding-top: 8px;
+      }
+
+      p.people-allowed {
+        font-size: 13px;
+        line-height: 19.5px;
+        padding-top: 4px;
+      }
+
+      hr {
+        border: 1px solid var(--card-stroke-color);
+      }
+
+      ul.features-list {
+        list-style-position: inside;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        ::marker {
+          color: var(--accent-color);
+        }
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      button {
+        width: 100%;
+        padding: 11px 0;
+        color: var(--accent-color);
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 600;
+        border: 1px solid var(--accent-color);
+        border-radius: 8px;
+        background-color: transparent;
+      }
+    }
+
+    div.item.featured {
+      background-color: var(--color-blue-900);
+      border-color: var(--color-blue-900);
+
+      p.type {
+        color: var(--color-blue-100);
+      }
+
+      h3.price {
+        color: white;
+      }
+
+      p.people-allowed {
+        color: var(--color-gray-500);
+      }
+
+      hr {
+        border: 1px solid var(--color-gray-900);
+      }
+
+      ul.features-list {
+        ::marker {
+          color: var(--color-blue-300);
+        }
+        color: var(--color-gray-200);
+      }
+
+      button {
+        color: white;
+        background-color: var(--accent-color);
       }
     }
   }
