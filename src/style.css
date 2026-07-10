@@ -255,6 +255,115 @@ section#pricing {
   }
 }
 
+section#faq {
+  gap: 48px;
+  background-color: #f8fafc;
+
+  div.faq-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      font-size: 48px;
+      line-height: 60px;
+      letter-spacing: -1.5px;
+      padding-top: 8px;
+    }
+
+    p.subtitle {
+      color: var(--text-color-muted);
+      font-size: 16px;
+      line-height: 24px;
+      padding-top: 12px;
+    }
+  }
+
+  div.faq-list {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    details {
+      background-color: white;
+      border: 1px solid var(--card-stroke-color);
+      border-radius: 12px;
+      padding: 0 24px;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+      &:hover {
+        border-color: #bfdbfe;
+      }
+
+      &[open] {
+        border-color: var(--color-blue-100);
+        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+      }
+
+      summary {
+        min-height: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        cursor: pointer;
+        list-style: none;
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: 600;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+
+        span.faq-icon {
+          width: 18px;
+          height: 18px;
+          flex-shrink: 0;
+          position: relative;
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 14px;
+            height: 2px;
+            border-radius: 2px;
+            background-color: var(--accent-color);
+            transform: translate(-50%, -50%);
+            transition: transform 0.2s ease;
+          }
+
+          &::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+          }
+        }
+      }
+
+      &[open] summary {
+        span.faq-icon::after {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+      }
+
+      > p {
+        color: var(--text-color-muted);
+        font-size: 15px;
+        line-height: 24px;
+        padding: 0 48px 24px 0;
+        max-width: 760px;
+      }
+    }
+  }
+}
+
 footer {
   color: var(--color-gray-400);
   background-color: var(--color-blue-900);
